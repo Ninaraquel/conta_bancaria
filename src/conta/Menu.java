@@ -2,11 +2,20 @@ package conta;
 
 import java.util.Scanner;
 
+import conta.model.Conta;
 import conta.util.Cores;
 
 public class Menu {
 
 	public static void main(String[] args) {
+		
+		
+		Conta conta1 = new Conta(22222, 123, 1, "Adriana", 10000.0f);
+		conta1.visualizar();
+		conta1.sacar(12000.0f);
+		conta1.visualizar();
+		conta1.depositar(5000.0f);
+		conta1.visualizar();
 
 		Scanner leia = new Scanner(System.in);
 
@@ -86,7 +95,7 @@ public class Menu {
 
 	public static void sobre() {
 		System.out.println("\n*********************************************************");
-		System.out.println("Projeto Desenvolvido por: ");
+		System.out.println("Projeto Desenvolvido por: Nina Souza");
 		System.out.println("Generation Brasil - generation@generation.org");
 		System.out.println("github.com/conteudoGeneration");
 		System.out.println("*********************************************************");
