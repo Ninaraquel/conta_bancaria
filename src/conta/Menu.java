@@ -3,19 +3,30 @@ package conta;
 import java.util.Scanner;
 
 import conta.model.Conta;
+import conta.model.ContaCorrente;
+import conta.model.ContaPoupanca;
 import conta.util.Cores;
 
 public class Menu {
 
 	public static void main(String[] args) {
 		
+		//teste da classe Conta Corrente
+		ContaCorrente cc1 = new ContaCorrente(2222, 124, 1, "Mariana", 15000.0f, 1000.0f);
+		cc1.visualizar();
+		cc1.sacar(12000.0f);
+		cc1.visualizar();
+		cc1.depositar(5000.0f);
+		cc1.visualizar();
 		
-		Conta conta1 = new Conta(22222, 123, 1, "Adriana", 10000.0f);
-		conta1.visualizar();
-		conta1.sacar(12000.0f);
-		conta1.visualizar();
-		conta1.depositar(5000.0f);
-		conta1.visualizar();
+		//Teste da classe Conta Poupanca
+		ContaPoupanca cp1 = new ContaPoupanca(3333, 125, 2, "Victor", 100000.0f, 15);
+		cp1.visualizar();
+		cp1.sacar(1000.0f);
+		cp1.visualizar();
+		cp1.depositar(5000.0f);
+		cp1.visualizar();
+
 
 		Scanner leia = new Scanner(System.in);
 
@@ -94,10 +105,11 @@ public class Menu {
 	}
 
 	public static void sobre() {
-		System.out.println("\n*********************************************************");
-		System.out.println("Projeto Desenvolvido por: Nina Souza");
-		System.out.println("Generation Brasil - generation@generation.org");
-		System.out.println("github.com/conteudoGeneration");
+		System.out.println(Cores.TEXT_GREEN + Cores.ANSI_BLACK_BACKGROUND 
+				         + "*********************************************************");
+		System.out.println("Projeto Desenvolvido por: Nina Souza                     ");
+		System.out.println("Generation Brasil - ninasouza@generation.org             ");
+		System.out.println("github.com/conteudoGeneration                            ");
 		System.out.println("*********************************************************");
 
 	}
